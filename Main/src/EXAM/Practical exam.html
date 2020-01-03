@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://exam.inf.elte.hu/blackjack1217.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Practical exam</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="./Practical exam_files/css">
+  <style type="text/css">
+  pre > code
+  {
+      all: unset;
+  }
+
+  code
+  {
+      color: blue;
+      font-size: 14px;
+      white-space: pre;
+      border-radius: 3px;
+      font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+      padding: 2px 4px;
+
+      display: inline-block;
+
+      background-image: radial-gradient(ellipse farthest-corner at 50% 50%, #e4e4e4, #ffffff);
+  }
+
+
+  pre
+  {
+    	margin-left: 3em;
+    	padding: 0.5em;
+
+    	border: 0.1em green solid !important;
+
+      display: inline-block;
+  }
+
+  table {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+      border-spacing: 0;
+      border-bottom: 2px solid black;
+      border-top: 2px solid black;
+      width: auto !important;
+  }
+
+  table th {
+      padding: 3px 10px;
+      background-color: white;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid black;
+  }
+
+  table td {
+      padding: 3px 10px;
+      border-top: none;
+      border-left: none;
+      border-bottom: none;
+      border-right: none;
+  }
+
+
+  h1 {
+      counter-reset: h2counter;
+      font-family: Lobster, Fallback, sans-serif;
+  }
+  h2 {
+      font-family: Alegreya, Fallback, sans-serif;
+      counter-increment: h2counter;
+      counter-reset: h3counter;
+  }
+  h2:before {
+      content: counter(h2counter) ".\0000a0\0000a0";
+  }
+  h3 {
+      counter-increment: h3counter;
+      font-family: Alegreya, Fallback, sans-serif;
+  }
+  h3:before {
+      content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+  }
+
+
+  nav#TOC:before {
+      content: "Table of contents";
+      background: lightgreen;
+      font-family: Fjalla One, Fallback, sans-serif;
+      padding: 0.2em;
+  }
+
+  nav#TOC {
+      float: right;
+      clear: both;
+      bottom: 0;
+      background-color:#FFF;
+      overflow: auto;
+      border: 1px solid green;
+
+      font-family: Alegreya, Fallback, sans-serif;
+  }
+
+  tr:nth-child(2n) {
+      background: #F0F0F0;
+  }
+  </style>
+
+<style>@media print {#ghostery-purple-box {display:none !important}}</style><style id="884dbb80-2160-4515-bec2-d2cb9c24bda1">.pb-toast-main {
+  z-index: 2147483639 !important;
+  position: fixed !important;
+  top: -50px !important;
+  left: 0px !important;
+  width: 100% !important;
+  height: 44px !important;
+  border: none !important;
+  box-shadow: 0 1px 0 0 #b6b4b6 !important;
+  transition: top 0.3s;
+}
+
+.pb-toast-main-move {
+  top: 0px !important;
+}
+
+.pb-toast-main-show {
+  transition: none;
+  top: 0px !important;
+}
+
+
+
+#pb_jq_tipsWrapper {
+  position: fixed !important;
+  width: 230px !important;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+  font-family: "Lucida Grande", tahoma, verdana, arial, sans-serif !important;
+  border-radius: 5px !important;
+  color: #ffffff !important;
+  z-index: 2147483641 !important;
+  padding: 15px !important;
+  font-size: 14px !important;
+}
+
+#pb_jq_tipsWrapper:before {
+  position: absolute !important;
+  top: -10px !important;
+  right: 60px !important;
+  display: inline-block !important;
+  border-right: 10px solid transparent !important;
+  border-bottom: 10px solid #000 !important;
+  border-left: 10px solid transparent !important;
+  border-bottom-color: rgba(0, 0, 0, 0.2) !important;
+  content: '' !important;
+}
+
+#pb_jq_tipsWrapper:after {
+  position: absolute !important;
+  top: -9px !important;
+  right: 60px !important;
+  display: inline-block !important;
+  border-right: 9px solid transparent !important;
+  border-bottom: 9px solid #000 !important;
+  border-left: 9px solid transparent !important;
+  content: '' !important;
+}
+
+#pb-link-copied-message {
+  display: none;
+  position: fixed;
+  width: 90px;
+  height: 29px;
+  opacity: 0;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2147483641;
+  font-family: "Lucida Grande", tahoma, verdana, arial, sans-serif !important;
+  font-size: 13px;
+  line-height: 29px;
+  text-align: center;
+  color: #ffffff;
+}</style></head>
+<body>
+<header id="title-block-header">
+<h1 class="title"><center>
+Advanced Java Practical exam, 2019.12.17.
+</center></h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="https://exam.inf.elte.hu/blackjack1217.html#general-information">General information</a></li>
+<li><a href="https://exam.inf.elte.hu/blackjack1217.html#exercise-1">Exercise 1</a></li>
+<li><a href="https://exam.inf.elte.hu/blackjack1217.html#exercise-2a">Exercise 2A</a></li>
+<li><a href="https://exam.inf.elte.hu/blackjack1217.html#exercise-2b">Exercise 2B</a></li>
+<li><a href="https://exam.inf.elte.hu/blackjack1217.html#exercise-2c">Exercise 2C</a></li>
+</ul>
+</nav>
+<h1 id="general-information">General information</h1>
+<p>You have to solve Exercise 1 first, then solve Exercises 2A, 2B and 2C in whichever order you like. Each fully solved exercise increases your mark by one. When you are done with Exercise 1, call me to check your solution.</p>
+<p>Create quality code.</p>
+<ul>
+<li>Use “advanced” constructs in your code whenever possible.</li>
+<li>No warnings, definitely no errors.</li>
+</ul>
+<p>When you’re ready, zip the whole project, and send it to me via e-mail.</p>
+<ul>
+<li>The filename should look like this: <code>advjava20191217-JohnSmith-ABCDEF</code> (if your name is <code>John Smith</code> and your Neptun code is <code>ABCDEF</code>).</li>
+</ul>
+<h1 id="exercise-1">Exercise 1</h1>
+<p>We are playing blackjack.</p>
+<p>Create an enumeration type <code>CardFace</code> that has the values <code>TWO</code>, <code>THREE</code> etc.</p>
+<ul>
+<li>Each card has a value as follows.
+<ul>
+<li>The value of cards two through ten is their pip value (<code>2</code> through <code>10</code>).</li>
+<li>Face cards (Jack, Queen, and King) are all worth ten.</li>
+<li>Aces are always worth eleven. (This is a simplification of the real rules.)</li>
+</ul></li>
+</ul>
+<p>In the class <code>Main1</code>, create <code>main</code> that does the following computation.</p>
+<ul>
+<li>Note that you <strong>must do the computation using a single <code>Stream</code></strong>, otherwise your solution will not be accepted.
+<ul>
+<li>For example, if you try to use a loop, your solution is worthless.</li>
+<li>You may open the standard input before.</li>
+</ul></li>
+<li>The standard input will contain words that are names of card faces or the word <code>done</code>.
+<ul>
+<li>Example: <code>FIVE TEN QUEEN JACK done</code></li>
+</ul></li>
+<li>Sum the values of all except, but leave out all repeated cards.
+<ul>
+<li>For this, you will have to maintain a state.</li>
+</ul></li>
+<li>Once you see the word <code>done</code>, you’re finished.
+<ul>
+<li>Print the resulting sum.</li>
+</ul></li>
+</ul>
+<p>You must solve this exercise fully before moving on to other exercises.</p>
+<p>Present your solution to me when you’re done.</p>
+<h1 id="exercise-2a">Exercise 2A</h1>
+<p>In class <code>Main2A</code>, create a server on port <code>10000</code>.</p>
+<p>When a client connects to the server, he sends in card names like in Exercise 1, followed by <code>done</code>. Let the server answer with the card value sum (as produced in Exercise 1), then the server disconnects from the client.</p>
+<p>Also, allow the server to handle many connections in parallel.</p>
+<h1 id="exercise-2b">Exercise 2B</h1>
+<p>Create the annotation <code>CardPlayer</code>. Make it so that methods can be annotated with it. It has two fields: a player name and a <code>CardFace</code>.</p>
+<p>Create the class <code>CardTournament</code>. In it, annotate some (static) methods with <code>CardPlayer</code>; the methods will take no arguments, and return an <code>int</code>.</p>
+<p>In the class <code>Main2B</code>, write a program that decides the tournament winner, that is, the player with the highest score.</p>
+<ul>
+<li>The score is computed like this: for all players, sum the card values from all the annotated methods that have the player’s name, except where the player is cheating.</li>
+<li>To decide if player is cheating on a card, call the method on which the annotation is present. The card is cheated if the return value of the method and the card’s value are different, or if the method’s name contains <code>cheat</code> textually.</li>
+</ul>
+<h1 id="exercise-2c">Exercise 2C</h1>
+<p>In class <code>Main2C</code>, open the file <code>java.exe</code> using NIO. Read bytes from the indexes <code>1</code>, <code>3</code>, <code>6</code>, <code>10</code>, <code>15</code>, <code>21</code> etc. up to the end of the file.</p>
+<p>If there is a card whose value is exactly that of a card, print the card’s name. For <code>10</code>, print <code>KING</code>.</p>
+
+
+</body></html>
